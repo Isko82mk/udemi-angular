@@ -1,0 +1,7 @@
+<button (click)="dispalyNone();logClick()" class="btn btn-primary">Display Details</button>
+
+<p [ngStyle]="{backgroundColor:'#F0FFFF', color:'#7393B3',padding:'5px',fontSize:'25px',alighnItems:'center',width:'fit-content',marginTop:'5px',borderRadius:'5px'}"
+	[ngClass]="{style:isTogled}">Acta,non verba!</p>
+
+<div *ngFor="let log of logs; let i = index" [ngStyle]="{backgroundColor:i>=5 ? 'blue' : 'white'  }"
+	[ngClass]="{fontColor:i>=5}">{{log}}</div>
